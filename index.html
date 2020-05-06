@@ -1,164 +1,188 @@
 <html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=9">
-	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<meta name="theme-color" content="#000000">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<title>Deezer music browser</title>
-	<link href="./css/main.css" rel="stylesheet">
-	<link rel="stylesheet" href="./css/tachyons.css">
-	<link rel="stylesheet" href="./css/styles.css">
-	<style></style>
-</head>
-
-<body data-gr-c-s-loaded="true"><noscript>You need to enable JavaScript to run this app.</noscript>
-	<div id="root">
-		<div id="appBody" class="tc">
-			<div name="header">
-				<nav class="navbar navbar-inverse navbar-fixed-top">
-					<div class="container">
-						<div class="container">
-							<div class="navbar-header">
-
-
-								<a href="/"><img src="./img/logo.png" class="_1Wqb15ylSXaRJQRQvxEpcB logo"
-										alt="logo"></a>
-
-								<button type="button" class="navbar-toggle collapsed"><span class="sr-only">Toggle
-										navigation</span><span class="icon-bar"></span><span
-										class="icon-bar"></span><span class="icon-bar"></span></button>
-
-
-							</div>
-							<div class="col-md-6 track-search-col">
-								<div class="mr-auto ml-auto _1W9OK7u9wMfaY8f-aL9t58 form-group"><span
-										class="input-group"><input placeholder="Track Search!" type="text"
-											class="form-control"><span class="input-group-addon"><span
-												class="glyphicon glyphicon-music"></span></span></span></div>
-							</div>
-
-						</div>
-					</div>
-				</nav>
-			</div>
-			<div class="_1hciUMDqmFnaiFJ32JEzR3 jumbotron">
-				<div class="container">
-					<div class="react-reveal"
-						style="animation-fill-mode: both; backface-visibility: visible; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-1;">
-						<div class="show-grid row">
-							<div class="col-md-12">
-								<div>
-									<h1 class="f1-ns f2-m">Welcome</h1>
-									<div class="f2-ns f3 mb3">This app is running with Deezer API engine.</div>
-								</div>
-							</div>
-							<!-- <div class="col-md-12">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <title>Deezer music browser</title>
+        <link href="./css/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/tachyons.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <style></style>
+    </head>
+    <body data-gr-c-s-loaded="true">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root">
+            <div id="appBody" class="tc">
+                <div name="header">
+                    <nav class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container">
+                            <div class="container">
+                                <div class="navbar-header">
+                                    <a href="/"><img src="./img/logo.png" class="_1Wqb15ylSXaRJQRQvxEpcB logo" alt="logo"></a>
+                                    <button type="button" class="navbar-toggle collapsed">
+                                        <span class="sr-only">Toggle
+										navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="col-md-5 track-search-col">
+                                    <fieldset class="scheduler-border">
+                                        <legend class="scheduler-border">Track Search</legend>
+                                        <div class="mr-auto ml-auto _1W9OK7u9wMfaY8f-aL9t58 form-group">
+                                            <span class="input-group"><input placeholder="Specify a track" type="text" class="form-control"><span class="input-group-addon"><span class="glyphicon glyphicon-music"></span></span></span>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5">
+                                    <fieldset class="scheduler-border">
+                                        <legend class="scheduler-border">Music Dashboard Color Schema</legend>
+                                        <div class="form-group">
+                                            <table width="100%" border="0">
+                                                <tr>
+                                                    <td> 
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"> <input type="radio" aria-label="RGB"> </span>
+                                                            <span class="colorLabels well-lg input-group-addon">RGB</span>
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                    </td>
+                                                    <td> 
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"> <input type="radio" aria-label="RGB"> </span>
+                                                            <span class="colorLabels input-group-addon">HEX</span>
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                    </td>
+                                                    <td> <span class="input-group"><input placeholder="Enter Color value!" type="text" class="form-control"></span> </td>
+                                                    <td> 
+                                                        <button type="submit" class="btn btn-default">Submit</button>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="_1hciUMDqmFnaiFJ32JEzR3 jumbotron">
+                    <div class="container">
+                        <div class="react-reveal" style="animation-fill-mode: both; backface-visibility: visible; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-1;">
+                            <div class="show-grid row">
+                                <!-- <div class="col-md-12">
 								<div class="mr-auto ml-auto _1W9OK7u9wMfaY8f-aL9t58 form-group"><span
 										class="input-group"><input placeholder="Track Search!" type="text"
 											class="form-control"><span class="input-group-addon"><span
 												class="glyphicon glyphicon-music"></span></span></span></div>
 							</div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pv4 container">
-				<div class="row">
-					<div class="col-md-12">
-						<div>
-							<div class="react-reveal"
-								style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-4;">
-								<div class="ReactTable">
-									<div class="rt-table" role="grid">
-										<div class="rt-thead -header" style="min-width: 600px;">
-											<div class="rt-tr" role="row">
-											
-												<div class="rt-th  rt-resizable-header" role="columnheader"
-													tabindex="-1" style="flex: 100 0 auto; width: 100px;">
-													<div class="rt-resizable-header-content">Image</div>
-													<div class="rt-resizer"></div>
-												</div>
-												<div class="rt-th  rt-resizable-header -cursor-pointer"
-													role="columnheader" tabindex="-1"
-													style="flex: 100 0 auto; width: 100px;">
-													<div class="rt-resizable-header-content">Title</div>
-													<div class="rt-resizer"></div>
-												</div>
-										
-												<div class="rt-th  rt-resizable-header -cursor-pointer"
-													role="columnheader" tabindex="-1"
-													style="flex: 100 0 auto; width: 100px;">
-													<div class="rt-resizable-header-content">Artist</div>
-													<div class="rt-resizer"></div>
-												</div>
-												<div class="rt-th  rt-resizable-header -cursor-pointer"
-													role="columnheader" tabindex="-1"
-													style="flex: 100 0 auto; width: 100px;">
-													<div class="rt-resizable-header-content">Play Track</div>
-													<div class="rt-resizer"></div>
-												</div>
-											</div>
-										</div>
-										<div class="rt-tbody" style="min-width: 600px;">
-									
-											<div class="rt-tr-group" role="rowgroup">
-												<div class="rt-tr -even" role="row">
-
-													<div class="rt-td" role="gridcell"
-														style="flex: 100 0 auto; width: 100px;">
-														<div class="react-reveal"
-															style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-2;">
-															<img src="https://cdns-images.dzcdn.net/images/cover/be682506145061814eddee648edb7c59/250x250-000000-80-0-0.jpg"
-																class="" style="width: 100px; height: 100px;"></div>
-													</div>
-													<div class="rt-td" role="gridcell"
-														style="flex: 100 0 auto; width: 100px;">
-														<div class="react-reveal"
-															style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-3;">
-															Not Afraid</div>
-													</div>
-
-													<div class="rt-td" role="gridcell"
-														style="flex: 100 0 auto; width: 100px;">
-														<div class="react-reveal"
-															style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-3;">
-															Eminem</div>
-													</div>
-													<div class="rt-td" role="gridcell"
-														style="flex: 100 0 auto; width: 100px;">
-														<div class="react-reveal"
-															style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-3;">
-															248 seconds</div>
-													</div>
-												</div>
-											</div>
-
-										</div>
-									</div>
-									<div class="-loading">
-										<div class="-loading-inner">Loading...</div>
-									</div>
-								</div>
-							</div><span></span>
-						</div>
-					</div>
-				</div>
-			</div><button type="button" class="_1uN1-DtVR-NnM9SAyIyLan btn btn-primary"><span
-					class="glyphicon glyphicon-glyphicon glyphicon-arrow-up"></span></button>
-			<footer class="navbar-fixed-bottom _1lEg6U4qr6A0vT-JcAH8Ks">
-				<div class="container">
-					<div class="row">
-						<p>Music app was created by @codedays</a></p>
-					</div>
-				</div>
-			</footer>
-		</div>
-	</div>
-	<!-- <script type="text/javascript" src="./js/main.js"></script> -->
-	<script>var config = { apiKey: "AIzaSyDF7A9yQAArSg8sC9ZW5YlIxs7E8ix_4Yo", authDomain: "deezer-music-browser.firebaseapp.com", databaseURL: "https://deezer-music-browser.firebaseio.com", projectId: "deezer-music-browser", storageBucket: "deezer-music-browser.appspot.com", messagingSenderId: "375004770099" }; firebase.initializeApp(config)</script>
-</body>
-
-</html>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pv4 container ">
+                    <div class="row">
+                        <div class="col-md-12 no-track">
+                            <div>
+                                <div class="react-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-4;">
+                                    <div class="ReactTable">
+                                        <div class="rt-table" role="grid">
+                                            <div class="rt-thead -header" style="min-width: 600px;">
+                                                <div class="rt-tr" role="row">
+                                                    <div class="rt-th  rt-resizable-header" role="columnheader" tabindex="-1" style="flex: 100 0 auto; width: 100px;">
+                                                        <div class="rt-resizable-header-content no-track-label">NO TRACK DATA TO SHOW</div>
+                                                        <div class="rt-resizer"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="-loading">
+                                            <div class="-loading-inner">Loading...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div>
+                                <div class="react-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-4;">
+                                    <div class="ReactTable">
+                                        <div class="rt-table" role="grid">
+                                            <div class="rt-thead -header" style="min-width: 600px;">
+                                                <div class="rt-tr" role="row">
+                                                    <div class="rt-th  rt-resizable-header" role="columnheader" tabindex="-1" style="flex: 100 0 auto; width: 100px;">
+                                                        <div class="rt-resizable-header-content">Image</div>
+                                                        <div class="rt-resizer"></div>
+                                                    </div>
+                                                    <div class="rt-th  rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1" style="flex: 100 0 auto; width: 100px;">
+                                                        <div class="rt-resizable-header-content">Title</div>
+                                                        <div class="rt-resizer"></div>
+                                                    </div>
+                                                    <div class="rt-th  rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1" style="flex: 100 0 auto; width: 100px;">
+                                                        <div class="rt-resizable-header-content">Artist</div>
+                                                        <div class="rt-resizer"></div>
+                                                    </div>
+                                                    <div class="rt-th  rt-resizable-header -cursor-pointer" role="columnheader" tabindex="-1" style="flex: 100 0 auto; width: 100px;">
+                                                        <div class="rt-resizable-header-content">Play Track</div>
+                                                        <div class="rt-resizer"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rt-tbody" style="min-width: 600px;">
+                                                <div class="rt-tr-group" role="rowgroup">
+                                                    <div class="rt-tr -even" role="row">
+                                                        <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
+                                                            <div class="react-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-2;">
+                                                                <img src="https://cdns-images.dzcdn.net/images/cover/be682506145061814eddee648edb7c59/250x250-000000-80-0-0.jpg" class="" style="width: 100px; height: 100px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
+                                                            <div class="react-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-3;">
+                                                                Not Afraid
+</div>
+                                                        </div>
+                                                        <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
+                                                            <div class="react-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-3;">
+                                                                Eminem
+</div>
+                                                        </div>
+                                                        <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
+                                                            <div class="react-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-491590191380387-3;">
+                                                                248 seconds
+</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="-loading">
+                                            <div class="-loading-inner">Loading...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="_1uN1-DtVR-NnM9SAyIyLan btn btn-primary">
+                    <span class="glyphicon glyphicon-glyphicon glyphicon-arrow-up"></span>
+                </button>
+                <footer class="navbar-fixed-bottom _1lEg6U4qr6A0vT-JcAH8Ks">
+                    <div class="container">
+                        <div class="row">
+                            <p>Music app was created by @codedays</a>
+                        </p>
+                    </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<!-- <script type="text/javascript" src="./js/main.js"></script> -->
+<script>var config = { apiKey: "AIzaSyDF7A9yQAArSg8sC9ZW5YlIxs7E8ix_4Yo", authDomain: "deezer-music-browser.firebaseapp.com", databaseURL: "https://deezer-music-browser.firebaseio.com", projectId: "deezer-music-browser", storageBucket: "deezer-music-browser.appspot.com", messagingSenderId: "375004770099" }; firebase.initializeApp(config)</script>
