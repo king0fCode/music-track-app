@@ -45,9 +45,8 @@ async function tableShow () {
 
     let resultsResponse = await fetchMusic()
     console.log(resultsResponse)
-      let resultTable = document.getElementById('resultTable')
-     
- 
+    let resultTable = document.getElementById('resultTable')
+
     //   let resultArr = {
     //       data: {
     //           title,
@@ -61,17 +60,16 @@ async function tableShow () {
     //   resultArr.data['artist'] = []
     //   resultArr.data['img'] = []
     //   resultArr.data['preview'] = []
-   
-    resultsResponse.data.forEach((element) => {
-        console.log(`${element.title}`)
 
-        title = element.title;
-        name = element.artist.name;
-        img = element.album.cover_medium;
-        preview = element.preview;
-       
-        
-       let dataDesign = `<div class="rt-tr-group" role="rowgroup">
+    resultsResponse.data.forEach(element => {
+      console.log(`${element.title}`)
+
+      title = element.title
+      name = element.artist.name
+      img = element.album.cover_medium
+      preview = element.preview
+
+      let dataDesign = `<div class="rt-tr-group" role="rowgroup">
        <div class="rt-tr -even" role="row">
        <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
        <div class="Data-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-2;">
@@ -90,22 +88,24 @@ async function tableShow () {
    </div>
    <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
        <div class="Data-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
-          ${preview}
-       </div>
+          
+       
+          <audio controls>
+       
+          <source src="${preview}" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+
+          </div>
+
+       
    </div>
  </div>
-   </div>`;
-        
-        
-    
+   </div>`
 
-        resultTable.innerHTML += dataDesign;
-
- 
+      resultTable.innerHTML += dataDesign
     })
   }
-
- 
 }
 
 var onWindowLoaded = () => {
