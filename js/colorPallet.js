@@ -1,10 +1,4 @@
-function tableShow () {
-  let tableData = document.querySelector('#DataTable')
-  tableData.removeAttribute('hidden')
 
-  let tableHide = document.querySelector('.container')
-  tableHide.style.display = 'none'
-}
 
 function scrollTop () {
   document.body.scrollTop = 0 // For Safari
@@ -89,15 +83,14 @@ function ColorSet () {
       // set dashboard color;
       if (colorChoice == 'RGB' || colorChoice == 'HEX') {
         console.log('colorChoice')
-          let themeColorTab = document.getElementById('dashboardColor')
-          let colorTitle = document.getElementById('colorTitle')
-          let trackSearch = document.getElementById('trackSearch');
-          themeColorTab.style.color =  colorCode;
+        let themeColorTab = document.getElementById('dashboardColor')
+        let colorTitle = document.getElementById('colorTitle')
+        let trackSearch = document.getElementById('trackSearch')
+        themeColorTab.style.color = colorCode
 
-          colorTitle.style.mixBlendMode = "difference"
-          trackSearch.style.mixBlendMode = "difference"
-          themeColorTab.style.backgroundColor = colorCode
-
+        colorTitle.style.mixBlendMode = 'difference'
+        trackSearch.style.mixBlendMode = 'difference'
+        themeColorTab.style.backgroundColor = colorCode
 
         // document.documentElement.style.setProperty('navbar-inverse', 'rgb(116, 23, 23)');
       } else {

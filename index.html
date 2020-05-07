@@ -37,9 +37,10 @@
 
                                         <table>
                                             <tr>
-                                                <td> <span class="input-group" style="float:left;"><input
-                                                            placeholder="Specify a track" type="text"
-                                                            class="form-control">
+                                                <td> <span class="input-group" style="float:left;">
+
+                                                        <input id="trackSearchInput" placeholder="Specify a track"
+                                                            type="text" class="form-control">
                                                     </span></td>
                                                 <td> <span style="float:right;">
                                                         <i id="searchAudio" class="far fa-file-audio"></i>
@@ -56,7 +57,8 @@
                             </div>
                             <div class="col-md-5">
                                 <fieldset class="scheduler-border">
-                                    <legend id="colorTitle" class="scheduler-border">Music Dashboard Color Schema</legend>
+                                    <legend id="colorTitle" class="scheduler-border">Music Dashboard Color Schema
+                                    </legend>
                                     <div class="form-group">
                                         <table width="100%" border="0">
                                             <tr>
@@ -81,7 +83,7 @@
                                                     <!-- /input-group -->
                                                 </td>
                                                 <td> <span class="input-group">
-                                                    <input placeholder="Enter Color value!" id="ColorChoice"
+                                                        <input placeholder="Enter Color value!" id="ColorChoice"
                                                             type="text" class="form-control"></span> </td>
                                                 <td>
                                                     <div class="submitColor" id="ColorButton"> <i id="paletteIcon"
@@ -99,7 +101,7 @@
                     </div>
                 </nav>
             </div>
-  
+
             <div class="pv4 container ">
                 <div class="row">
                     <div class="col-md-12" id="error-div">
@@ -135,7 +137,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                 
+
                                     <div class="-loading">
                                         <div class="-loading-inner">Loading...</div>
                                     </div>
@@ -143,104 +145,105 @@
                             </div>
                             <span></span>
                         </div>
-                    </>
-                    <div class="col-md-12">
-                        <div>
-                            <div class="Data-reveal"
-                                style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-4;">
-                                <div class="DataTable">
-                                    <div class="rt-table" role="grid">
-                                        <div class="rt-thead -header" style="min-width: 600px;">
-                                            <div id="titles" class="rt-tr" role="row">
-                                                <div class="rt-th  rt-resizable-header" role="columnheader"
-                                                    tabindex="-1" style="flex: 100 0 auto; width: 100px;">
-                                                    <div class="rt-resizable-header-content">Album Cover</div>
-                                                    <div class="rt-resizer"></div>
-                                                </div>
-                                                <div class="rt-th  rt-resizable-header -cursor-pointer"
-                                                    role="columnheader" tabindex="-1"
-                                                    style="flex: 100 0 auto; width: 100px;">
-                                                    <div class="rt-resizable-header-content">Album Title</div>
-                                                    <div class="rt-resizer"></div>
-                                                </div>
-                                                <div class="rt-th  rt-resizable-header -cursor-pointer"
-                                                    role="columnheader" tabindex="-1"
-                                                    style="flex: 100 0 auto; width: 100px;">
-                                                    <div class="rt-resizable-header-content">Artist</div>
-                                                    <div class="rt-resizer"></div>
-                                                </div>
-                                                <div class="rt-th  rt-resizable-header -cursor-pointer"
-                                                    role="columnheader" tabindex="-1"
-                                                    style="flex: 100 0 auto; width: 100px;">
-                                                    <div class="rt-resizable-header-content">Track Preview</div>
-                                                    <div class="rt-resizer"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="rt-tbody" style="min-width: 600px;">
-                                            <div class="rt-tr-group" role="rowgroup">
-                                                <div class="rt-tr -even" role="row">
-                                                    <div class="rt-td" role="gridcell"
-                                                        style="flex: 100 0 auto; width: 100px;">
-                                                        <div class="Data-reveal"
-                                                            style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-2;">
-                                                            <img src="https://cdns-images.dzcdn.net/images/cover/be682506145061814eddee648edb7c59/250x250-000000-80-0-0.jpg"
-                                                                class="" style="width: 100px; height: 100px;">
-                                                        </div>
+                        </>
+                        <div class="col-md-12">
+                            <div>
+                                <div class="Data-reveal"
+                                    style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-4;">
+                                    <div class="DataTable">
+                                        <div class="rt-table" role="grid">
+                                            <div class="rt-thead -header" style="min-width: 600px;">
+                                                <div id="titles" class="rt-tr" role="row">
+                                                    <div class="rt-th  rt-resizable-header" role="columnheader"
+                                                        tabindex="-1" style="flex: 100 0 auto; width: 100px;">
+                                                        <div class="rt-resizable-header-content">Album Cover</div>
+                                                        <div class="rt-resizer"></div>
                                                     </div>
-                                                    <div class="rt-td" role="gridcell"
+                                                    <div class="rt-th  rt-resizable-header -cursor-pointer"
+                                                        role="columnheader" tabindex="-1"
                                                         style="flex: 100 0 auto; width: 100px;">
-                                                        <div class="Data-reveal"
-                                                            style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
-                                                            Not Afraid
-                                                        </div>
+                                                        <div class="rt-resizable-header-content">Album Title</div>
+                                                        <div class="rt-resizer"></div>
                                                     </div>
-                                                    <div class="rt-td" role="gridcell"
+                                                    <div class="rt-th  rt-resizable-header -cursor-pointer"
+                                                        role="columnheader" tabindex="-1"
                                                         style="flex: 100 0 auto; width: 100px;">
-                                                        <div class="Data-reveal"
-                                                            style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
-                                                            Eminem
-                                                        </div>
+                                                        <div class="rt-resizable-header-content">Artist</div>
+                                                        <div class="rt-resizer"></div>
                                                     </div>
-                                                    <div class="rt-td" role="gridcell"
+                                                    <div class="rt-th  rt-resizable-header -cursor-pointer"
+                                                        role="columnheader" tabindex="-1"
                                                         style="flex: 100 0 auto; width: 100px;">
-                                                        <div class="Data-reveal"
-                                                            style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
-                                                            248 seconds
-                                                        </div>
+                                                        <div class="rt-resizable-header-content">Track Preview</div>
+                                                        <div class="rt-resizer"></div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="rt-tbody" style="min-width: 600px;">
+                                                <div class="rt-tr-group" role="rowgroup">
+                                                    <div class="rt-tr -even" role="row">
+                                                        <div class="rt-td" role="gridcell"
+                                                            style="flex: 100 0 auto; width: 100px;">
+                                                            <div class="Data-reveal"
+                                                                style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-2;">
+                                                                <img src="https://cdns-images.dzcdn.net/images/cover/be682506145061814eddee648edb7c59/250x250-000000-80-0-0.jpg"
+                                                                    class="" style="width: 100px; height: 100px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="rt-td" role="gridcell"
+                                                            style="flex: 100 0 auto; width: 100px;">
+                                                            <div class="Data-reveal"
+                                                                style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
+                                                                Not Afraid
+                                                            </div>
+                                                        </div>
+                                                        <div class="rt-td" role="gridcell"
+                                                            style="flex: 100 0 auto; width: 100px;">
+                                                            <div class="Data-reveal"
+                                                                style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
+                                                                Eminem
+                                                            </div>
+                                                        </div>
+                                                        <div class="rt-td" role="gridcell"
+                                                            style="flex: 100 0 auto; width: 100px;">
+                                                            <div class="Data-reveal"
+                                                                style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
+                                                                248 seconds
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="-loading">
-                                        <div class="-loading-inner">Loading...</div>
+                                        <div class="-loading">
+                                            <div class="-loading-inner">Loading...</div>
+                                        </div>
                                     </div>
                                 </div>
+                                <span></span>
                             </div>
-                            <span></span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="_1uN1-DtVR-NnM9SAyIyLan">
-                <span class="scroll-up">
-                    <i id="scrollUp" class="fas fa-chevron-circle-up"></i>
-                </span>
-            </div>
-            <footer class="navbar-fixed-bottom _1lEg6U4qr6A0vT-JcAH8Ks">
-                <div class="container">
-                    <div class="row">
-                        <p>Music app was created by @codedays</a>
-                        </p>
-                    </div>
+                <div class="_1uN1-DtVR-NnM9SAyIyLan">
+                    <span class="scroll-up">
+                        <i id="scrollUp" class="fas fa-chevron-circle-up"></i>
+                    </span>
                 </div>
-            </footer>
+                <footer class="navbar-fixed-bottom _1lEg6U4qr6A0vT-JcAH8Ks">
+                    <div class="container">
+                        <div class="row">
+                            <p>Music app was created by @codedays</a>
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/validationHelper.js"></script>
-    <!-- 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="./js/jquery.color.js"></script> -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+        <script src="//cdn-files.deezer.com/js/min/dz.js"></script>
+
+
+        <script src="./js/colorPallet.js"></script>
+        <script src="./js/musicApi.js"></script>
+
