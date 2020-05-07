@@ -6,6 +6,11 @@ function tableShow () {
   tableHide.style.display = 'none'
 }
 
+function scrollTop () {
+  document.body.scrollTop = 0 // For Safari
+  document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
+}
+
 validateColor = color => {
   let colorRegExp = new RegExp(
     /^#([\da-f]{3}){1,2}$|^#([\da-f]{4}){1,2}$|(rgb|hsl)a?\((\s*-?\d+%?\s*,){2}(\s*-?\d+%?\s*,?\s*\)?)(,\s*(0?\.\d+)?|1)?\)/gim
@@ -20,6 +25,7 @@ validateColor = color => {
 }
 
 function fadeOutError (msg) {
+  scrollTop()
   document.getElementById('errorMsg').innerHTML = 'Error : ' + msg
   var x = document.getElementById('error-div')
   x.style.display = 'block'
@@ -43,12 +49,11 @@ function fadeOutError (msg) {
 function ColorSet () {
   console.log('inside function colorset')
   let errors = false
-
-  var rdbcolor = document.getElementsByName('rdbchoice')
-  var colorChoice = document.getElementById('ColorChoice').value
+  let colorChoice = false
+  let rdbcolor = false
 
   if (document.querySelector('input[name="rdbchoice"]:checked')) {
-    let colorChoice = document.querySelector('input[name="rdbchoice"]:checked')
+    colorChoice = document.querySelector('input[name="rdbchoice"]:checked')
       .value
     console.log(colorChoice)
   } else {
@@ -82,8 +87,13 @@ function ColorSet () {
 
     if (!errors) {
       // set dashboard color;
-      if (colorChoice === 'RGB') {
-      } else if (colorChoice === 'HEX') {
+      if (colorChoice == 'RGB' || colorChoice == 'HEX') {
+        console.log('colorChoice')
+        let themeColorTab = document.getElementById('dashboardColor')
+
+        themeColorTab.style.backgroundColor = colorCode
+
+        // document.documentElement.style.setProperty('navbar-inverse', 'rgb(116, 23, 23)');
       } else {
         let msg = 'Error on selecting color choice'
         fadeOutError(msg)
@@ -95,8 +105,6 @@ function ColorSet () {
 
 var onWindowLoaded = () => {
   console.log('window loaded')
-
-  // set error div to hide at initial loading
 
   // let onBtnClickSong = document.querySelector("#SongButton");
   // onBtnClickSong.addEventListener("click",tableShow);

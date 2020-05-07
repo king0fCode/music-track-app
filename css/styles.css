@@ -3,6 +3,9 @@
  * Copyright 2011-2016 Twitter, Inc.
  */
 
+ :root {
+  --theme-color: rgb(37, 37, 37);
+}
 
 html {
   font-family: sans-serif;
@@ -409,8 +412,9 @@ input[type='radio']:focus {
   }
 }
 .navbar-inverse {
-  background-color: #222;
+  /* background-color: #222; */
   border-color: #080808;
+  background-color:var(--theme-color);
 }
 .navbar-inverse .navbar-toggle {
   border-color: #333;
@@ -470,7 +474,7 @@ input[type='radio']:focus {
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 .navbar-inverse {
-  background-image: -webkit-linear-gradient(top, #3c3c3c, #222);
+  /* background-image: -webkit-linear-gradient(top, #3c3c3c, #222);
   background-image: -o-linear-gradient(top, #3c3c3c 0, #222 100%);
   background-image: -webkit-gradient(
     linear,
@@ -478,8 +482,8 @@ input[type='radio']:focus {
     left bottom,
     from(#3c3c3c),
     to(#222)
-  );
-  background-image: linear-gradient(180deg, #3c3c3c 0, #222);
+  ); */
+  /* background-image: linear-gradient(180deg, #3c3c3c 0, #222); */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff3c3c3c",endColorstr="#ff222222",GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
