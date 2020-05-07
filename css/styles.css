@@ -473,7 +473,11 @@ input[type='radio']:focus {
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+
+
 .navbar-inverse {
+  /* mix-blend-mode: difference !important; */
   /* background-image: -webkit-linear-gradient(top, #3c3c3c, #222);
   background-image: -o-linear-gradient(top, #3c3c3c 0, #222 100%);
   background-image: -webkit-gradient(
