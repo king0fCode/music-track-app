@@ -6,28 +6,26 @@ function fetchMusic () {
   let urlSortOption = `&order=${columnKey}`
   let searchTerm = `${url + searchString + urlSortOption}&output=jsonp`
   console.log(searchTerm)
-  let responseQuery = fetch(searchTerm) // Call the fetch function passing the url of the API as a parameter
-    .then(response => {
-      if (response.ok) {
-          return response.json()
-          console.log('ok')
-      } else {
-        console.log('false')
-        return false
-      }
 
-      // Your code for handling the data you get from the API
+  function handleErrors (response) {
+    if (!response.ok) {
+      throw Error(response.statusText)
+    }
+    return response
+  }
+
+  let responseQuery = fetch(searchTerm)
+    .then(handleErrors)
+    .then(function (response) {
+      console.log(response)
+      return response
+      console.log('ok')
     })
-    .catch(function (err) {
-      // This is where you run code if the server returns any errors
-      console.log('error')
-
-      return false
+    .catch(function (error) {
+      console.log(error)
     })
-    console.log(responseQuery)
-    return responseQuery;
-   
-
+  return responseQuery
+  console.log(responseQuery)
 }
 
 function tableShow () {
