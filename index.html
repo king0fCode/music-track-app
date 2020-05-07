@@ -7,10 +7,8 @@
     <meta name="theme-color" content="#000000">
     <link rel="shortcut icon" href="/favicon.ico">
     <title>Deezer music browser</title>
-    <link rel="stylesheet" href="./css/tachyons.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.css">
-    <style></style>
 </head>
 
 <body data-gr-c-s-loaded="true">
@@ -64,17 +62,17 @@
                                             <tr>
                                                 <td>
                                                     <div class="input-group">
-                                                        <span class="input-group-addon"> <input type="radio"
+                                                        <span class="input-group-addon transparent"> <input type="radio"
                                                                 aria-label="RGB"> </span>
-                                                        <span class="colorLabels well-lg input-group-addon">RGB</span>
+                                                        <span class="colorLabels well-lg input-group-addon transparent">RGB</span>
                                                     </div>
                                                     <!-- /input-group -->
                                                 </td>
                                                 <td>
                                                     <div class="input-group">
-                                                        <span class="input-group-addon"> <input type="radio"
+                                                        <span class="input-group-addon transparent"> <input type="radio"
                                                                 aria-label="RGB"> </span>
-                                                        <span class="colorLabels input-group-addon">HEX</span>
+                                                        <span class="colorLabels input-group-addon transparent">HEX</span>
                                                     </div>
                                                     <!-- /input-group -->
                                                 </td>
@@ -124,7 +122,8 @@
                                                 <div class="rt-th  rt-resizable-header" role="columnheader"
                                                     tabindex="-1" style="flex: 100 0 auto; width: 100px;">
                                                     <div class="rt-resizable-header-content no-track-label">NO TRACK
-                                                        DATA TO SHOW</div>
+                                                        DATA TO SHOW</div><br/>
+                                                        <div><i id="sadIcon" class="fas fa-sad-tear"></i></div>
                                                     <div class="rt-resizer"></div>
                                                 </div>
                                             </div>
@@ -145,16 +144,16 @@
                                 <div class="ReactTable">
                                     <div class="rt-table" role="grid">
                                         <div class="rt-thead -header" style="min-width: 600px;">
-                                            <div class="rt-tr" role="row">
+                                            <div id="titles" class="rt-tr" role="row">
                                                 <div class="rt-th  rt-resizable-header" role="columnheader"
                                                     tabindex="-1" style="flex: 100 0 auto; width: 100px;">
-                                                    <div class="rt-resizable-header-content">Image</div>
+                                                    <div class="rt-resizable-header-content">Album Cover</div>
                                                     <div class="rt-resizer"></div>
                                                 </div>
                                                 <div class="rt-th  rt-resizable-header -cursor-pointer"
                                                     role="columnheader" tabindex="-1"
                                                     style="flex: 100 0 auto; width: 100px;">
-                                                    <div class="rt-resizable-header-content">Title</div>
+                                                    <div class="rt-resizable-header-content">Album Title</div>
                                                     <div class="rt-resizer"></div>
                                                 </div>
                                                 <div class="rt-th  rt-resizable-header -cursor-pointer"
@@ -166,7 +165,7 @@
                                                 <div class="rt-th  rt-resizable-header -cursor-pointer"
                                                     role="columnheader" tabindex="-1"
                                                     style="flex: 100 0 auto; width: 100px;">
-                                                    <div class="rt-resizable-header-content">Play Track</div>
+                                                    <div class="rt-resizable-header-content">Track Preview</div>
                                                     <div class="rt-resizer"></div>
                                                 </div>
                                             </div>
@@ -217,9 +216,11 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="_1uN1-DtVR-NnM9SAyIyLan btn btn-primary">
-                <span class="scroll-up"></span>
-            </button>
+            <div class="_1uN1-DtVR-NnM9SAyIyLan">
+                <span class="scroll-up">
+                    <i id="scrollUp" class="fas fa-chevron-circle-up"></i>
+                </span>
+            </div>
             <footer class="navbar-fixed-bottom _1lEg6U4qr6A0vT-JcAH8Ks">
                 <div class="container">
                     <div class="row">
