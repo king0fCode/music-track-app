@@ -45,25 +45,64 @@ async function tableShow () {
 
     let resultsResponse = await fetchMusic()
     console.log(resultsResponse)
-
-    let resultTable = document.getElementById('resultTable')
-    let resultArr = {}
-      resultArr['data'] = []
-      resultArr['data']['title'] = []
-      resultArr['data']['artist'] = []
-      resultArr['data']['img'] = []
-      let c = 0;
-    resultsResponse.data.forEach((element) => {
-       console.log(`${element}`)
-
-        resultArr['data']['title'][c] += element.title;
-        resultArr['data']['artist'][c] += element.artist.name;
-        resultArr['data']['img'][c] += element.artist.picture_small;
+      let resultTable = document.getElementById('resultTable')
      
-        c++;
+ 
+    //   let resultArr = {
+    //       data: {
+    //           title,
+    //           img,
+    //           artist,
+    //           preview
+    //     }
+    // }
+    //   resultArr.data = {}
+    //   resultArr.data.title = {}
+    //   resultArr.data['artist'] = []
+    //   resultArr.data['img'] = []
+    //   resultArr.data['preview'] = []
+   
+    resultsResponse.data.forEach((element) => {
+        console.log(`${element.title}`)
+
+        title = element.title;
+        name = element.artist.name;
+        img = element.album.cover_medium;
+        preview = element.preview;
+       
+        
+       let dataDesign = `<div class="rt-tr-group" role="rowgroup">
+       <div class="rt-tr -even" role="row">
+       <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
+       <div class="Data-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-2;">
+           <img src="${img}" class="" style="width: 100px; height: 100px;">
+       </div>
+   </div>
+   <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
+       <div class="Data-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
+           ${title}
+       </div>
+   </div>
+   <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
+       <div class="Data-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
+       ${name}
+       </div>
+   </div>
+   <div class="rt-td" role="gridcell" style="flex: 100 0 auto; width: 100px;">
+       <div class="Data-reveal" style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-3;">
+          ${preview}
+       </div>
+   </div>
+ </div>
+   </div>`;
+        
+        
+    
+
+        resultTable.innerHTML += dataDesign;
+
  
     })
-    console.log(resultArr)
   }
 
  
