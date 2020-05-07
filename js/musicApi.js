@@ -1,10 +1,10 @@
-function fetchMusic () {
+const fetchMusic = async function () {
   const url = 'https://api.deezer.com/search/?q='
   const columnKey = 'TRACK'
   let searchString = document.getElementById('trackSearchInput').value
 
   let urlSortOption = `&order=${columnKey}`
-  let searchTerm = `${url + searchString + urlSortOption}&output=jsonp`
+  let searchTerm = `${url + searchString + urlSortOption}&output=json`
   console.log(searchTerm)
 
   function handleErrors (response) {
@@ -17,25 +17,17 @@ function fetchMusic () {
   let responseQuery = fetch(searchTerm)
     .then(handleErrors)
     .then(function (response) {
-      console.log(response)
-      return response
+      return response.json()
       console.log('ok')
     })
     .catch(function (error) {
-      console.log(error)
+      console.log('error')
     })
   return responseQuery
   console.log(responseQuery)
 }
 
-function tableShow () {
-  // let tableData = document.querySelector('#DataTable')
-  // tableData.removeAttribute('hidden')
-
-  // let tableHide = document.querySelector('.container')
-
-  // tableHide.style.display = 'none'
-
+async function tableShow () {
   if (document.getElementById('trackSearchInput').value.length == 0) {
     errors = true
     let msg = 'No Track entered'
@@ -51,8 +43,14 @@ function tableShow () {
     var noTrackDiv = document.getElementById('no-track-div')
     noTrackDiv.style.display = 'none'
 
-    let resultsResponse = fetchMusic()
+    let resultsResponse = await fetchMusic()
     console.log(resultsResponse)
+    resultsResponse.data.forEach(obj => {
+      Object.entries(obj).forEach(([key, value]) => {
+        console.log(`${key} ${value}`)
+      })
+      console.log('-------------------')
+    })
   }
 
   console.log('track Search')
