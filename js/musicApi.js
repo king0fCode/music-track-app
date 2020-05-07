@@ -95,7 +95,8 @@ async function tableShow () {
 
       resultTable.innerHTML += dataDesign
     })
-  }
+    }
+    console.log('inside function')
 }
 
 var onWindowLoaded = () => {
