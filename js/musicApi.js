@@ -15,6 +15,13 @@ function tableShow () {
         fadeOutError(msg)
         console.log('No Track input entered')
     } else {
+        var resultDiv = document.getElementById('trackResults')
+        resultDiv.style.display = 'block'
+
+        
+        var noTrackDiv = document.getElementById('no-track-div')
+        noTrackDiv.style.display = 'none'
+
         let trackInput = document.getElementById('trackSearchInput').value
     }
     

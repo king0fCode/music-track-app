@@ -70,7 +70,10 @@ td {
   padding: 0;
 }
 
-#track-div {
+#trackResults {
+  display: none;
+}
+#no-track-div {
   margin-top: 100px !important;
 }
 
