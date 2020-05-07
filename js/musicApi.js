@@ -1,4 +1,6 @@
 const fetchMusic = async function () {
+  let resultTable = document.getElementById('resultTable')
+  resultTable.innerHTML = ''
   const url = 'https://api.deezer.com/search/?q='
   const columnKey = 'TRACK'
   let searchString = document.getElementById('trackSearchInput').value
@@ -47,19 +49,7 @@ async function tableShow () {
     console.log(resultsResponse)
     let resultTable = document.getElementById('resultTable')
 
-    //   let resultArr = {
-    //       data: {
-    //           title,
-    //           img,
-    //           artist,
-    //           preview
-    //     }
-    // }
-    //   resultArr.data = {}
-    //   resultArr.data.title = {}
-    //   resultArr.data['artist'] = []
-    //   resultArr.data['img'] = []
-    //   resultArr.data['preview'] = []
+  
 
     resultsResponse.data.forEach(element => {
       console.log(`${element.title}`)
