@@ -1,3 +1,5 @@
 *.js
 _pgbackup
 *.json
+channel.html
+controller.js
