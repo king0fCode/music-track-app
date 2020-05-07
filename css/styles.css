@@ -67,6 +67,13 @@ td {
   padding: 0;
 }
 
+#track-div {
+  margin-top: 100px !important;
+}
+
+#initial-track-div {
+  padding: 50px 0px !important;
+}
 @media print {
   * {
     color: #000 !important;
@@ -102,7 +109,15 @@ td {
   box-sizing: border-box;
 }
 
-
+#error-div {
+  margin-top: 125px !important;
+  display: none;
+}
+.-errors-inner {
+  background-color: rgb(150, 101, 101);
+  padding: 10px !important;
+  color: rgb(199, 199, 199) !important;
+}
 button,
 input {
   font-family: inherit;

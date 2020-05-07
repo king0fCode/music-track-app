@@ -63,8 +63,8 @@
                                                 <td>
                                                     <div class="input-group">
                                                         <span class="input-group-addon transparent"> <input
-                                                                name="colorType" id="colorType" type="radio"
-                                                                aria-label="RGB"> </span>
+                                                                name="rdbchoice" id="rdbchoice" type="radio"
+                                                                aria-label="RGB" value="RGB"> </span>
                                                         <span
                                                             class="colorLabels well-lg input-group-addon transparent">RGB</span>
                                                     </div>
@@ -73,17 +73,18 @@
                                                 <td>
                                                     <div class="input-group">
                                                         <span class="input-group-addon transparent"> <input
-                                                                name="colorType" id="colorType" type="radio"
-                                                                aria-label="RGB"> </span>
+                                                                name="rdbchoice" id="rdbchoice" type="radio"
+                                                                aria-label="HEX" value="HEX"> </span>
                                                         <span
                                                             class="colorLabels input-group-addon transparent">HEX</span>
                                                     </div>
                                                     <!-- /input-group -->
                                                 </td>
-                                                <td> <span class="input-group"><input placeholder="Enter Color value!"
+                                                <td> <span class="input-group">
+                                                    <input placeholder="Enter Color value!" id="ColorChoice"
                                                             type="text" class="form-control"></span> </td>
                                                 <td>
-                                                    <div class="submitColor"> <i id="paletteIcon"
+                                                    <div class="submitColor" id="ColorButton"> <i id="paletteIcon"
                                                             class="fas fa-palette"></i></div>
 
 
@@ -98,25 +99,26 @@
                     </div>
                 </nav>
             </div>
-            <div class="_1hciUMDqmFnaiFJ32JEzR3 jumbotron">
-                <div class="container">
-                    <div class="Data-reveal"
-                        style="animation-fill-mode: both; backface-visibility: visible; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-1;">
-                        <div class="show-grid row">
-                            <!-- <div class="col-md-12">
-								<div class="mr-auto ml-auto _1W9OK7u9wMfaY8f-aL9t58 form-group"><span
-										class="input-group"><input placeholder="Track Search!" type="text"
-											class="form-control"><span class="input-group-addon"><span
-												class="glyphicon glyphicon-music"></span></span></span></div>
-							</div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+  
             <div class="pv4 container ">
                 <div class="row">
-                    <div class="col-md-12 no-track">
-                        <div>
+                    <div class="col-md-12" id="error-div">
+                        <div class="_1hciUMDqmFnaiFJ32JEzR3 jumbotron">
+                            <div class="container">
+                                <div class="Data-reveal"
+                                    style="animation-fill-mode: both; backface-visibility: visible; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-1;">
+                                    <div class="show-grid row">
+                                        <div class="-errors">
+                                            <div class="-errors-inner" id="errorMsg">Errors...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 no-track" id="track-div">
+
+                        <div id="initial-track-div">
                             <div class="Data-reveal"
                                 style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: Data-reveal-491590191380387-4;">
                                 <div class="DataTable">
@@ -133,6 +135,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                 
                                     <div class="-loading">
                                         <div class="-loading-inner">Loading...</div>
                                     </div>
@@ -140,7 +143,7 @@
                             </div>
                             <span></span>
                         </div>
-                    </div>
+                    </>
                     <div class="col-md-12">
                         <div>
                             <div class="Data-reveal"

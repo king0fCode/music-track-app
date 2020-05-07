@@ -1,4 +1,3 @@
-*.js
 _pgbackup
 *.json
 channel.html
