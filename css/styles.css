@@ -2163,3 +2163,19 @@ body {
 .no-track-label {
   padding: 25px !important;
 }
+
+#paletteIcon {
+  height: 30px !important;
+  color: orange;
+  width: 50px !important;
+}
+
+input {
+  height: 50px !important;
+}
+
+#searchAudio {
+  height: 50px !important;
+  width: 50px !important;
+  color: #59afc2 !important;
+}
